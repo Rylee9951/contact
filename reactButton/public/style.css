@@ -1,0 +1,10 @@
+#button {
+	background-color: blue;
+	color:white;
+	height: 150px;
+	width: 200px;
+	border-radius: 8px;
+	outline: none;
+	font-size: 40px;
+	font-family: sans-serif;
+}
