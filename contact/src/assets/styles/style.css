@@ -1,0 +1,28 @@
+#page1{
+	border:1px solid #ccc;
+	width: 290px;
+	margin-left: 35px;
+
+}
+.header{
+	
+	border:1px solid #81BC39;
+	background-color: #81BC39;
+	width: 290px;
+	height: 75px;
+}
+h2{
+	font-size: 50px;
+	
+	margin: 5px 0 0 19px;
+}
+
+
+li{
+	list-style: none;
+	text-decoration: none;
+	font-size: 30px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #ccc;
+
+}

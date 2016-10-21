@@ -7,17 +7,15 @@ require('assets/styles/style.css')
 // Layouts
 import App from 'layouts/app';
 // Contacts
-import contacts from 'ui/contacts';
+import Contacts from 'ui/contacts';
 // Contact
-import contact from 'ui/contact';
-// People
-import people from 'data/people';
+import User from 'ui/user';
 
 ReactDOM.render((
   <Router history={hashHistory}>
     <Route component={App}>
-      <Route component={contacts}/>
-      <Route component={contact}/>
+      <Route path="/" component={Contacts}/>
+      <Route path="/user/:id" component={User}/>
     </Route>
   </Router>
 ), document.getElementById('app'));
