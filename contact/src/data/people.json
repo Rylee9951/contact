@@ -12,7 +12,7 @@
     {
       "id": 2,
       "name": "Milton Hunter",
-      "email": "vincent.lévesque@example.com",
+      "email": "milton.hunter@example.com",
       "cell": "833-301-1425",
       "location": "4589 grand marais ave", 
       "large":"https://randomuser.me/api/portraits/men/54.jpg",
@@ -20,7 +20,7 @@
     },
     {
       "id": 3,
-      "name": "Afsar aykac",
+      "name": "Afsar Aykac",
       "email":"afşar.aykaç@example.com",
       "cell":"(630)-356-9595",
       "location":"6520 vatan cd",
@@ -28,9 +28,9 @@
       "thumbnail":"https://randomuser.me/api/portraits/thumb/women/86.jpg"
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "Vincent Levesque",
-      "email":"milton.hunter@example.com",
+      "email":"vincent.lévesque@example.com",
        "cell":"(223)-333-7790",
       "location": "4031 bollinger rd",
       "large":"https://randomuser.me/api/portraits/men/62.jpg",

@@ -11,6 +11,9 @@ export default React.createClass({
       		{People.map(function(person) {
       			return (
   					<li>{person.name}</li>
+  					<li>{person.email}</li>
+  					<li>{person.cell}</li>
+  					<li>{person.location}</li>
       			)
       		}}
 
