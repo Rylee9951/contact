@@ -30,7 +30,8 @@ export default React.createClass({
   },
   render: function() {
     return (
-      <div>
+      <div id="info">
+      <div className="photo">My Photo</div>
       	<ul>
 					<li>{this.state.name}</li>
 					<li>{this.state.email}</li>

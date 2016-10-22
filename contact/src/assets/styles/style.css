@@ -1,8 +1,9 @@
 #page1{
 	border:1px solid #ccc;
 	width: 290px;
-	margin-left: 35px;
-
+	box-shadow: 3px 3px #ccc, -1em 0 0.4em #ccc; 
+	height: 280px;
+	margin:auto;
 }
 .header{
 	
@@ -10,6 +11,7 @@
 	background-color: #81BC39;
 	width: 290px;
 	height: 75px;
+	box-shadow: 0px 5px 11px #81BC39;
 }
 h2{
 	font-size: 50px;
@@ -21,8 +23,42 @@ h2{
 li{
 	list-style: none;
 	text-decoration: none;
-	font-size: 30px;
+	font-size: 27px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #ccc;
-
+    margin-left: -40px;
+    padding-left: 10px;
+	font-family: sans-serif;
 }
+a{
+	text-decoration: none;
+	text-align: center;
+	color: #373737;
+}
+
+#info{
+	border:1px solid #ccc;
+	width: 406px;
+	height: 404px;
+	margin:auto;
+	box-shadow: 3px 3px #ccc, -1em 0 0.4em #ccc;
+}
+
+.photo{
+	width: 336px;
+	height: 190px;
+	font-size: 91px;
+	padding-left: 70px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #81BC39;
+	background-color: #81BC39;
+}	
+
+
+
+
+
+
+
+
+
