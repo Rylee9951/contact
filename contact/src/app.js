@@ -15,7 +15,7 @@ ReactDOM.render((
   <Router history={hashHistory}>
     <Route component={App}>
       <Route path="/" component={Contacts}/>
-      <Route path="/user/:id" component={User}/>
+      <Route path="/contact/:id" component={User}/>
     </Route>
   </Router>
 ), document.getElementById('app'));

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router';
-
-import People from 'data/people.json'
+import React from 'react'
+import { Link } from 'react-router'
+import {getContact} from 'api/contacts'
 
 export default React.createClass({
   getInitialState: function() {
@@ -15,19 +14,18 @@ export default React.createClass({
   componentWillMount: function () {
     var id = this.props.params.id;
 
-    var person = People.users.filter(function(person){
-      return person.id == id
-    })[0]
-
+        getContact(id).then(resp => {
+           this.setState({
+           name: resp.data.name,
+           email: resp.data.email,
+           cell: resp.data.cell,
+           location:resp.data.location
+          })
+        })
    
-
-    this.setState({
-      name: person.name,
-      email: person.email,
-      cell: person.cell,
-      location:person.location
-    })
   },
+
+
   render: function() {
     return (
       <div id="info">
@@ -42,3 +40,4 @@ export default React.createClass({
     )
   }
 });
+

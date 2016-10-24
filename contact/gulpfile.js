@@ -34,4 +34,4 @@ gulp.task('watch', function () {
   gulp.watch('./src/**/*', ['webpack']);
 });
 
-gulp.task('default', ['webpack', 'serve:web', 'watch']);
+gulp.task('default', ['webpack', 'serve:api', 'serve:web', 'watch']);

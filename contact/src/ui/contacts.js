@@ -1,25 +1,62 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from 'react'
+import { Link } from 'react-router'
+import {getContacts, deleteContact} from 'api/contacts'
 
-import People from 'data/people.json'
 
-export default React.createClass({
-  render: function() {
+
+const ContactListContainer = React.createClass({
+  getInitialState: function(){
+   return{ 
+    contacts: []
+   }
+  },
+  componentWillMount: function () {
+    this.rerender
+  },
+  rerender: function(){
+     getContacts().then(resp => {
+          console.log (resp)
+        this.setState({
+        contacts: resp.data
+      })
+    })
+   },
+  render: function(){
     return (
-      <div id="page1">
-      	<div className="header">
-      	<h2>My Friends</h2>
-      	</div>
-      	<ul>
-      		{People.users.map(function(person) {
-      			return (
-  					<li key={person.id}>
-  						<Link to={"/user/" + person.id}>{person.name}</Link>
-  					</li>
-      			)
-      		})}
-      	</ul>
+        <ContactList rerender={this.rerender} contacts={this.state.contacts} />
+      )
+  }
+      
+})
+
+const ContactList = React.createClass({
+  deleteContact: function(e){
+    var id = e.target.id.substr(1)
+
+    deleteContact(id).then(resp => {
+        this.props.rerender
+    })
+
+  },
+  render: function (){
+    return(
+        <div id="page1">
+        <div className="header">
+        <h2>My Friends</h2>
+        </div>
+        <ul>
+          {this.props.contacts.map(person => {
+            return (
+            <li key={person.id}>
+              <Link to={`/contact/${person.id}`}>{person.name}</Link>
+            <button id={`d${person.id}`} onClick= {this.deleteContact}>Delete</button>
+            </li>
+            )
+          })}
+        </ul>
       </div>
     )
   }
-});
+})
+
+export default ContactListContainer
