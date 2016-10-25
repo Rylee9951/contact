@@ -13,6 +13,6 @@ export function deleteContact(id) {
 	return axios.delete(`contacts/${id}`)
 }
 
-export function createContact(obj) {
-	return axios.post(`contacts/, obj`)
+export function createContact() {
+	return axios.put(`contacts`)
 }

@@ -2,7 +2,7 @@
 	border:1px solid #ccc;
 	width: 290px;
 	box-shadow: 3px 3px #ccc, -1em 0 0.4em #ccc; 
-	height: 280px;
+	height: auto;
 	margin:auto;
 }
 .header{

@@ -11,7 +11,7 @@ const ContactListContainer = React.createClass({
    }
   },
   componentWillMount: function () {
-    this.rerender
+    this.rerender()
   },
   rerender: function(){
      getContacts().then(resp => {
@@ -44,7 +44,7 @@ const ContactList = React.createClass({
           </div>
           <ul>
             <li>
-              <button>Add Contact</button>
+              <Link to="/createContact/"><button>Add Contact</button></Link>
             </li>
             {this.props.contacts.map(person => {
               return (
