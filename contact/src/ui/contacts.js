@@ -15,10 +15,9 @@ const ContactListContainer = React.createClass({
   },
   rerender: function(){
      getContacts().then(resp => {
-          console.log (resp)
         this.setState({
         contacts: resp.data
-      })
+      })  
     })
    },
   render: function(){
@@ -36,24 +35,26 @@ const ContactList = React.createClass({
     deleteContact(id).then(resp => {
         this.props.rerender
     })
-
   },
   render: function (){
     return(
-        <div id="page1">
-        <div className="header">
-        <h2>My Friends</h2>
-        </div>
-        <ul>
-          {this.props.contacts.map(person => {
-            return (
-            <li key={person.id}>
-              <Link to={`/contact/${person.id}`}>{person.name}</Link>
-            <button id={`d${person.id}`} onClick= {this.deleteContact}>Delete</button>
+      <div id="page1">
+          <div className="header">
+            <h2>My Friends</h2>
+          </div>
+          <ul>
+            <li>
+              <button>Add Contact</button>
             </li>
-            )
-          })}
-        </ul>
+            {this.props.contacts.map(person => {
+              return (
+              <li key={person.id}>
+                <Link to={`/contact/${person.id}`}>{person.name}</Link>
+                <button id={`d${person.id}`} onClick= {this.deleteContact}>Delete</button>
+              </li>
+              )              
+            })}
+          </ul>
       </div>
     )
   }
