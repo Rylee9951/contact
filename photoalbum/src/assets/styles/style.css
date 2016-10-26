@@ -35,6 +35,39 @@ h3{
 	font-size: 30px;
 	color: #541414;
 }
+#gallery_layout{
+	display: flex;
+}
+
 .coloumn{
+	width: 300px;
+	height: 1105px;
+	background-color: #360505;
+}
+.pictures{
 	
+	width: 100%;
+}
+.header_pictures{
+	height: 200px;
+	width:100%;
+	background-color: #541414;
+	text-align: center;
+	font-size: 100px;
+}
+
+.button{
+	display: inline-block;
+	justify-content: space-around;
+	width: 200px;
+	height: 50px;
+	background-color: #ccc;
+	margin: 70px 0 0 25px;
+}
+.photos{
+	display: inline-block;
+    width: 330px;
+    height: 380px;
+    background-color: #570303;
+    margin: 70px 0 0 100px;
 }
