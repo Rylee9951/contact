@@ -44,12 +44,14 @@ const ContactList = React.createClass({
           </div>
           <ul>
             <li>
-              <Link to="/createContact/"><button>Add Contact</button></Link>
+              <Link to="/createContact/"><button id="add">Add Contact</button></Link>
             </li>
             {this.props.contacts.map(person => {
               return (
               <li key={person.id}>
-                <Link to={`/contact/${person.id}`}>{person.name}</Link>
+                <Link to={`/contact/${person.id}`}>
+                <img className="list" src={person.thumbnail}/>
+                {person.name}</Link>
                 <button id={`d${person.id}`} onClick= {this.deleteContact}>Delete</button>
               </li>
               )              

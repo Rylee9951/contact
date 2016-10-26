@@ -1,34 +1,63 @@
 #page1{
 	border:1px solid #ccc;
-	width: 290px;
+	width: 339px;
 	box-shadow: 3px 3px #ccc, -1em 0 0.4em #ccc; 
 	height: auto;
 	margin:auto;
+}
+.list{
+	border-radius: 100%
+}
+#add{
+	height: 56px;
+    width: 200px;
+    font-size: 30px;
+    background-color: #44CC11;
+    color: white;
+    margin-left: 35px;
+    border-radius: 50px;
+}
+#d1, #d2, #d3, #d4{
+	background-color: red;
+	color: white;
+	border-radius: 50px;
+	width: 48px;
+	height: 30px;
+}
+#d1, #d2{
+	margin-left:65px ;
+}
+#d3{
+	margin-left: 83px;
+}
+#d4{
+	margin-left: 13px;
 }
 .header{
 	
 	border:1px solid #81BC39;
 	background-color: #81BC39;
-	width: 290px;
+	width: 337px;
 	height: 75px;
 	box-shadow: 0px 5px 11px #81BC39;
 }
 h2{
 	font-size: 50px;
 	
-	margin: 5px 0 0 19px;
+	margin: 5px 0 0 40px;
 }
 
 
 li{
 	list-style: none;
-	text-decoration: none;
-	font-size: 27px;
-	padding-bottom: 15px;
-	border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    font-size: 27px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #ccc;
     margin-left: -40px;
     padding-left: 10px;
-	font-family: sans-serif;
+    font-family: sans-serif;
+    padding-top: 10px;
 }
 a{
 	text-decoration: none;
@@ -39,26 +68,54 @@ a{
 #info{
 	border:1px solid #ccc;
 	width: 406px;
-	height: 404px;
+	height: auto;
 	margin:auto;
 	box-shadow: 3px 3px #ccc, -1em 0 0.4em #ccc;
+}
+h1{
+	margin:0 0 0 28px;
 }
 
 .photo{
 	width: 336px;
 	height: 190px;
-	font-size: 91px;
+	font-size: 45px;
 	padding-left: 70px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #81BC39;
 	background-color: #81BC39;
 }	
+#create{
+	margin:auto;
+	border: 1px solid #ccc;
+	width: 300px;
+}
 
+input{
+	height: 30px;
+    width: 250px;
+    padding-bottom: 5px;
+    font-size: 28px;
+    margin:0 0 26px 23px;
 
+}
 
-
-
-
+#submit{
+	width: 130px;
+    height: 30px;
+    margin-left: 77px;
+    font-size: 17px;
+    background-color: #0077CC;
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.newContact{
+	margin-left: 50px;
+    font-size: 30px;
+    text-decoration: underline;
+    color: #44CC11;
+}
 
 
 

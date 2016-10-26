@@ -25,11 +25,11 @@ export default React.createClass({
    
   },
 
-
+  
   render: function() {
     return (
       <div id="info">
-      <div className="photo">My Photo</div>
+        <div className="photo"><h1>My Photo</h1></div>
       	<ul>
 					<li>{this.state.name}</li>
 					<li>{this.state.email}</li>
@@ -39,5 +39,6 @@ export default React.createClass({
       </div>
     )
   }
-});
+})
+
 

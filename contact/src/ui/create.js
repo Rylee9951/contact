@@ -12,31 +12,30 @@ const createUserContainer = React.createClass({
 			"location":""
 		}
 	},
-	update:function(e){
-		var val = e.target.value
+	update: function(e){
+		var obj = this.state
 		var id = e.target.id
-		var statObj={}
-		var stateObj{id} = val
+		
+		obj[id] = e.target.value	
 
-		this.setState(stateObj)
+		this.setState(obj)
 	},
 
-	createUser: function(e){
-		e.preventDefault()
+	createUser: function(){
 		createContact(this.state)
-		hashHistory.push('/contacts/')
+		 hashHistory.push('/contacts/')
 	},
 	
 render: function() {
     return (
       <div id="create">
-      <div className="newContact">New Contact</div>
-      	<form onSubmit={this.createUser}>
-					<input onChange ={this.update} type="text" name="name" placeholder="Jonh Doe"></input>
-					<input onChange ={this.update} type="email" name="email" placeholder="Email@email.com"></input>
-					<input onChange ={this.update} type="tel" name="cell" placeholder="(555)-555-5555"></input>
-					<input onChange ={this.update} type="text" name="location" placeholder="Street Address"></input>
-					<button>Submit</button>
+      <div className="newContact"><h3>New Contact</h3></div>
+      	<form>
+					<input id="name" onChange ={this.update} type="text" name="name" placeholder="Jonh Doe"></input><br />
+					<input id="email"onChange ={this.update} type="email" name="email" placeholder="Email@email.com"></input><br />
+					<input id="cell"onChange ={this.update} type="tel" name="cell" placeholder="(555)-555-5555"></input><br />
+					<input id="location"onChange ={this.update} type="text" name="location" placeholder="Street Address"></input><br />
+					<button id="submit" onClick={this.createUser}>Submit</button>					
       	</form>
       </div>
     )
